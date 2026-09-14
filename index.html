@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#050505" name="theme-color"/>
+<meta content="dark" name="color-scheme"/>
+<meta content="Popat ❤️ Chaklii — Our Little Forever Movie. A private cinematic relationship story." name="description"/>
+<title>Popat ❤️ Chaklii — Our Little Forever Movie</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Parisienne&amp;display=swap" rel="stylesheet"/>
+<link href="style.css?v=20260914-softhearts2" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script defer="" src="script.js?v=20260914-softhearts2"></script>
+<meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/><meta content="telephone=no" name="format-detection"/><link href="manifest.webmanifest" rel="manifest"/><link href="assets/icon.svg" rel="icon" type="image/svg+xml"/></head>
+<body>
+<div aria-live="polite" class="app" id="app">
+<div class="ambient ambient--a"></div>
+<div class="ambient ambient--b"></div>
+<div class="grain"></div>
+<div aria-hidden="true" class="particle-layer" id="particle-layer"></div>
+<div aria-hidden="true" class="heart-layer" id="heart-layer"></div>
+<header aria-label="Movie controls" class="hud">
+<div class="hud__brand">POPAT <span>♥</span> CHAKLII</div>
+<div class="hud__controls">
+<button aria-label="Play music" aria-pressed="false" class="icon-btn" id="music-toggle" type="button">♫</button>
+<button aria-label="Toggle sound effects" aria-pressed="true" class="icon-btn" id="sound-toggle" type="button">◒</button>
+</div>
+</header>
+<div aria-label="Story progress" class="progress">
+<div class="progress__fill" id="progress-fill"></div>
+<div class="progress__count" id="scene-count">01 / 19</div>
+</div>
+<main class="movie-stage" id="movie-stage">
+<!-- LOADING -->
+<section aria-label="Loading the movie" class="scene scene--loading is-active" data-scene="0" id="loading-screen">
+<div class="loading__inner">
+<div class="film-mark">PRIVATE PREMIERE</div>
+<div class="loading-copy" id="loading-copy"></div>
+<div aria-hidden="true" class="loading-heart">♥</div>
+<div class="loading-line"><span id="loading-line-fill"></span></div>
+</div>
+</section>
+<!-- ENTER -->
+<section aria-label="Enter the story" class="scene scene--intro" data-scene="0.5" id="intro-screen">
+<div class="cinema-vignette"></div>
+<div class="intro__inner">
+<p class="eyebrow">A PRIVATE LITTLE MOVIE</p>
+<h1 class="hero-title">Popat <span>♥</span> Chaklii</h1>
+<p class="hero-subtitle">Our Little Forever Movie</p>
+<p class="intro-copy">A tiny cinematic world Popat made only for his Chaklii.</p><p class="mobile-guide" id="mobile-guide">Best on your phone • sound on • swipe between scenes • scroll when a scene is longer</p>
+<button class="gold-button gold-button--large" id="enter-story" type="button">Enter Our Story <span>♥</span></button>
+<p class="tap-hint">Sound starts only after you enter.</p>
+</div>
+<div class="curtain curtain--left"></div>
+<div class="curtain curtain--right"></div>
+</section>
+<!-- 01 -->
+<section class="scene scene--characters" data-scene="1" id="scene-1">
+<div class="scene-bg scene-bg--stars"></div>
+<div class="scene-inner scene-inner--tight">
+<p class="eyebrow">SCENE 01</p>
+<h2>The Two Characters</h2>
+<div class="character-stage">
+<div class="character-card character-card--left" id="chaklii-character">
+<div aria-hidden="true" class="character-avatar bird bird--chaklii"><span class="bird__eye"></span><span class="bird__beak"></span></div>
+<p class="character-name">🐦 Chaklii</p>
+<p class="character-copy" id="chaklii-copy"></p>
+</div>
+<div class="character-card character-card--right" id="popat-character">
+<div aria-hidden="true" class="character-avatar bird bird--popat"><span class="bird__eye"></span><span class="bird__beak"></span></div>
+<p class="character-name">🦜 Popat</p>
+<p class="character-copy" id="popat-copy"></p>
+</div>
+</div>
+<div class="glass-card question-card">
+<p class="question-label">The first important question…</p>
+<h3>Who is more dramatic? 😌</h3>
+<p class="question-helper">Be honest, Chaklii… this question was designed by Popat and therefore may contain suspiciously cute bias. 😂</p>
+<div class="choice-grid">
+<button class="choice-btn" data-action="dramatic" data-value="chaklii">Obviously Chaklii 😌</button>
+<button class="choice-btn" data-action="dramatic" data-value="popat">Obviously Popat 😏</button>
+</div>
+<p aria-live="polite" class="result-copy" id="dramatic-result"></p>
+</div>
+</div>
+</section>
+<!-- 02 -->
+<section class="scene scene--fights" data-scene="2" id="scene-2">
+<div class="scene-bg scene-bg--red"></div>
+<div class="scene-inner">
+<p class="eyebrow">SCENE 02</p>
+<h2>The Fight Chapter</h2>
+<div aria-hidden="true" class="repair-heart"><span>♥</span></div>
+<div class="cinematic-stack">
+<p class="reveal-line">Our relationship has one special talent…</p>
+<p class="reveal-line">Fighting over the smallest things.</p>
+<p class="reveal-line"><em>Like professionals. 😂</em></p>
+</div>
+<div class="glass-card question-card">
+<h3>Who starts fights more?</h3>
+<p class="question-helper">Choose carefully, Chaklii. There is only one correct answer. 😌</p>
+<div class="choice-grid">
+<button class="choice-btn" data-action="fight" data-value="me">Me 😇</button>
+<button class="choice-btn no-btn" data-action="fight" data-value="him">Him 😈</button>
+</div>
+<p aria-live="polite" class="result-copy" id="fight-result"></p>
+</div>
+</div>
+</section>
+<!-- 03 -->
+<section class="scene scene--complaint" data-scene="3" id="scene-3">
+<div class="scene-inner">
+<p class="eyebrow">SCENE 03</p>
+<div class="complaint-window">
+<div class="complaint-bar"><span>DEPARTMENT OF RELATIONSHIP MISCHIEF</span><span>● ● ●</span></div>
+<div class="complaint-content">
+<h2>Official Complaints Against Popat</h2>
+<div class="complaint-list">
+<label class="complaint-item"><span class="checkbox">☐</span>Teases Chaklii too much</label>
+<label class="complaint-item"><span class="checkbox">☐</span>Annoys Chaklii intentionally</label>
+<label class="complaint-item"><span class="checkbox">☐</span>Makes Chaklii angry</label>
+<label class="complaint-item"><span class="checkbox">☐</span>Still thinks he is innocent</label>
+</div>
+<button class="gold-button" id="submit-complaint" type="button">Submit Complaint</button>
+<div class="complaint-stamp" id="complaint-stamp">APPROVED ✓</div>
+<p class="result-copy" id="complaint-result"></p>
+</div>
+</div>
+</div>
+</section>
+<!-- 04 -->
+<section class="scene scene--escape" data-scene="4" id="scene-4">
+<div class="scene-inner scene-inner--center">
+<p class="eyebrow">SCENE 04</p>
+<h2>Try To Escape Popat</h2>
+<p class="big-question">Do you still want this annoying Popat?</p>
+<div class="choice-row escape-row" id="escape-row">
+<button class="gold-button gold-button--large" id="yes-escape" type="button">YES <span>♥</span></button>
+<button class="ghost-button" id="no-escape" type="button">NO 😤</button>
+</div>
+<p class="result-copy result-copy--large" id="escape-result"></p>
+</div>
+</section>
+<!-- 05 -->
+<section class="scene scene--real-story" data-scene="5" id="scene-5">
+<div class="scene-bg scene-bg--gold"></div>
+<div class="scene-inner scene-inner--wide">
+<p class="eyebrow">SCENE 05</p>
+<h2>The Real Story</h2>
+<div class="date-reveal"><span>0</span><span>3</span><i>.</i><span>0</span><span>5</span><i>.</i><span>2</span><span>0</span><span>2</span><span>4</span></div>
+<p class="date-caption">The day my favourite person entered my life.</p>
+<div class="timeline">
+<div class="timeline__line"></div>
+<article class="timeline-card"><span>01</span><h3>The beginning</h3><p>One tiny start that quietly became a very big part of my life.</p></article>
+<article class="timeline-card"><span>02</span><h3>The crazy moments</h3><p>Laughs, teasing, random conversations, and things only we understand.</p></article>
+<article class="timeline-card"><span>03</span><h3>The fights</h3><p>Because apparently loving each other also requires professional-level arguments.</p></article>
+<article class="timeline-card"><span>04</span><h3>The memories</h3><p>The little moments that stay longer than the big ones.</p></article>
+<article class="timeline-card"><span>05</span><h3>Still together</h3><p>Somehow, after all of it, my favourite notification is still you. ❤️</p></article>
+</div>
+<div class="glass-card reflection-card">
+<p>I didn't know…</p>
+<p>That this tiny little Chaklii would become the person who irritates me…</p>
+<p>surprises me…</p>
+<p>fights with me…</p>
+<p>and somehow becomes my favourite notification. ❤️</p>
+</div>
+</div>
+</section>
+<!-- 06 -->
+<section class="scene scene--letter" data-scene="6" id="scene-6">
+<div class="scene-inner scene-inner--center">
+<p class="eyebrow">SCENE 06</p>
+<div class="envelope-wrap">
+<div class="envelope" id="envelope-1"><div class="envelope__flap"></div><div class="envelope__seal">♥</div><div class="envelope__paper"><p>From Popat</p></div></div>
+</div>
+<h2>A small letter from Popat…</h2>
+<button class="gold-button gold-button--large" id="open-letter-1" type="button">Open Popat's Heart <span>♥</span></button>
+<div class="letter-body" hidden="" id="letter-body-1">
+<p>Dear Chaklii ❤️</p>
+<p>I know sometimes I tease you too much.</p>
+<p>Sometimes I make you annoyed.</p>
+<p>Sometimes I joke around when maybe you just wanted me to understand you.</p>
+<p>And I know… sometimes I have hurt the person who only wanted love from me.</p>
+<p>But Chaklii… I want you to know something.</p>
+<p>I notice your efforts. I notice the small things you do. I notice how much you care.</p>
+<p>Even when I don't always show it properly… you matter to me more than I say.</p>
+<p class="letter-highlight">I don't want to promise that I will become perfect overnight.</p>
+<p>Because I know I am still learning.</p>
+<p>But I promise…</p>
+<p class="letter-final">I will keep learning how to love you better. ❤️</p>
+</div>
+</div>
+</section>
+<!-- 07 -->
+<section class="scene scene--thanks" data-scene="7" id="scene-7">
+<div class="scene-inner scene-inner--center">
+<p class="eyebrow">SCENE 07</p>
+<h2>The Truth I Don't Say Enough…</h2>
+<div class="effort-grid">
+<div class="effort-card">You make efforts. <span>♥</span></div>
+<div class="effort-card">You care. <span>♥</span></div>
+<div class="effort-card">You try. <span>♥</span></div>
+<div class="effort-card">You stay. <span>♥</span></div>
+</div>
+<p class="thanks-line">Thank you for choosing me…</p>
+<p class="thanks-sub">Even on days when I make it difficult.</p>
+<div aria-hidden="true" class="hands"><span>🤍</span><span>🤝</span></div>
+</div>
+</section>
+<!-- 08 -->
+<section class="scene scene--quiz" data-scene="8" id="scene-8">
+<div class="scene-inner scene-inner--center">
+<p class="eyebrow">SCENE 08</p>
+<h2>Chaklii's Relationship Test 😌</h2>
+<div class="glass-card quiz-card" id="quiz-card">
+<div class="quiz-progress"><span id="quiz-step">1</span> / 5</div>
+<h3 id="quiz-question"></h3>
+<div class="choice-grid" id="quiz-options"></div>
+<p class="result-copy" id="quiz-result"></p>
+<button class="gold-button" hidden="" id="quiz-next" type="button">Next Question</button>
+</div>
+</div>
+</section>
+<!-- 09 -->
+<section class="scene scene--soft-romance" data-scene="9" id="scene-9">
+<div class="scene-bg scene-bg--beige"></div>
+<div class="scene-inner scene-inner--center">
+<p class="eyebrow">SCENE 09</p>
+<h2>My favourite place is not a location.</h2>
+<p class="cinematic-quote">It is those small moments…</p>
+<div class="soft-cards">
+<div class="soft-card">Your smile.</div>
+<div class="soft-card">Your silly talks.</div>
+<div class="soft-card">Our random conversations.</div>
+<div class="soft-card">The moments where everything else disappears.</div>
+</div>
+<p class="soft-final">Those are the moments I want more of. ❤️</p>
+</div>
+</section>
+<!-- 10 -->
+<section class="scene scene--secret" data-scene="10" id="scene-10">
+<div class="scene-inner scene-inner--center">
+<p class="eyebrow">SCENE 10</p>
+<h2>Secret Heart Buttons</h2>
+<p class="instruction">Tap the glowing hearts. There are messages hiding inside.</p>
+<div aria-label="Secret hearts" class="secret-heart-board" id="secret-heart-board"></div>
+<div aria-live="polite" class="secret-message" id="secret-message">One is already hiding somewhere…</div>
+</div>
+</section>
+<!-- 11 -->
+<section class="scene scene--control" data-scene="11" id="scene-11">
+<div class="scene-inner scene-inner--center">
+<p class="eyebrow">SCENE 11</p>
+<div class="control-panel">
+<div class="control-header"><span>CHAKLII SETTINGS PANEL 🐦</span><span class="status-dot">● ONLINE</span></div>
+<div class="meter"><div class="meter__top"><span>Anger Level</span><strong>90%</strong></div><div class="meter__track"><span style="--level:90%"></span></div></div>
+<div class="meter"><div class="meter__top"><span>Cuteness Level</span><strong>100%</strong></div><div class="meter__track"><span style="--level:100%"></span></div></div>
+<div class="meter"><div class="meter__top"><span>Missing Popat Level</span><strong>100%</strong></div><div class="meter__track"><span style="--level:100%"></span></div></div>
+<div class="meter"><div class="meter__top"><span>Teasing Tolerance</span><strong>60%</strong></div><div class="meter__track"><span style="--level:60%"></span></div></div>
+<button class="gold-button" id="update-settings" type="button">Update Settings</button>
+<p class="result-copy" id="settings-result"></p>
+</div>
+</div>
+</section>
+<!-- 12 -->
+<section class="scene scene--error" data-scene="12" id="scene-12">
+<div class="glitch-overlay"></div>
+<div class="scene-inner scene-inner--center">
+<p class="warning-symbol">⚠</p>
+<p class="eyebrow">SYSTEM CHECK</p>
+<h2>WARNING</h2>
+<p class="error-title">Detecting cuteness…</p>
+<div class="scan-bar"><span id="scan-fill"></span></div>
+<p class="error-copy" id="error-copy">Running relationship diagnostics…</p>
+<button class="gold-button" disabled="" id="continue-error" type="button">Continue Anyway</button>
+</div>
+</section>
+<!-- 13 -->
+<section class="scene scene--final-melting" data-scene="13" id="scene-13">
+<div class="scene-inner scene-inner--center">
+<p class="eyebrow">SCENE 13</p>
+<div class="final-transition-copy" id="final-transition-copy"><p>Wait, Chaklii…</p><p>Before the ending…</p><p>There is something I want to say without joking.</p></div>
+<div class="final-letter-wrap" id="final-letter-wrap">
+<div class="envelope envelope--final"><div class="envelope__flap"></div><div class="envelope__seal">♥</div><div class="envelope__paper"><p>A final note from Popat</p></div></div>
+<button class="gold-button" id="open-final-letter" type="button">Read This Slowly ♥</button>
+</div>
+<div class="official-letter" hidden="" id="final-letter">
+<div class="official-letter__seal-row">
+<span class="official-letter__seal">♥</span>
+<span class="official-letter__tiny">A QUIET PROMISE • FROM POPAT</span>
+</div>
+<div class="official-letter__header">
+<p class="official-letter__kicker">BEFORE THE LAST CHAPTER</p>
+<h3>One honest promise</h3>
+<p class="official-letter__date">03 MAY 2024 → TODAY</p>
+</div>
+<div class="official-letter__rule"></div>
+<div class="official-letter__body"><p class="letter-signature">Chaklii ❤️</p><p>I know I can hide serious feelings behind jokes. So this part has no trick, no quiz, and no escape button.</p><p>I know I am not perfect. Sometimes I tease too much, misunderstand you, or realise too late that you needed patience instead of another joke.</p><p>But I never want carelessness to become normal between us. If something matters to you, I want to learn to treat it like it matters to me too.</p><p class="letter-highlight">My promise is simple: more listening, more effort, more honesty, and less ego when we disagree.</p><p>I cannot promise a story with no difficult moments. I can promise that I will keep trying to handle those moments better.</p><p>And on the ordinary days—the random messages, the silly conversations, the small laughs—I hope I never become too used to you to remember how special those moments are.</p><p class="letter-final">You are not just part of this movie. You are the reason I wanted to make it. ❤️</p><p class="letter-signature letter-signature--end">— Popat 🦜❤️</p></div>
+<div class="official-letter__footer"><span>MORE PATIENCE</span><span>MORE EFFORT</span><span>MORE US</span></div>
+</div>
+</div>
+</section>
+<!-- 14 -->
+<section class="scene scene--counter" data-scene="14" id="scene-14">
+<div class="scene-bg scene-bg--midnight"></div>
+<div class="scene-inner scene-inner--center">
+<p class="eyebrow">SCENE 14</p>
+<h2>Our Little Forever Counter ❤️</h2>
+<p class="counter-start">Since 03 May 2024</p>
+<div aria-label="Time together" class="counter-grid">
+<div class="counter-unit"><strong id="count-days">0000</strong><span>Days</span></div>
+<div class="counter-unit"><strong id="count-hours">00</strong><span>Hours</span></div>
+<div class="counter-unit"><strong id="count-minutes">00</strong><span>Minutes</span></div>
+<div class="counter-unit"><strong id="count-seconds">00</strong><span>Seconds</span></div>
+</div>
+<p class="counter-line">Every second becomes another memory.</p>
+</div>
+</section>
+<!-- 15 -->
+<section class="scene scene--memories" data-scene="15" id="scene-15">
+<div class="scene-inner scene-inner--wide">
+<p class="eyebrow">SCENE 15</p>
+<h2>Photo Memory Movie</h2>
+<p class="instruction">Some memories are too important to rush past. These are little bookmarks in our story.</p>
+<div class="memory-timeline" id="memory-timeline"></div>
+</div>
+</section>
+<!-- 16 -->
+<section class="scene scene--promise" data-scene="16" id="scene-16">
+<div class="scene-inner scene-inner--center">
+<p class="eyebrow">SCENE 16</p>
+<div class="spotlight"></div>
+<h2>Our Little Promise</h2>
+<div class="promise-stack">
+<p>My promise is not to be perfect.</p>
+<p>My promise is to keep trying.</p>
+<p>To understand you better.</p>
+<p>To make more efforts.</p>
+<p class="promise-final">And to keep choosing you. ❤️</p>
+</div>
+<div aria-hidden="true" class="hands hands--promise">🤝</div>
+</div>
+</section>
+<!-- 17 -->
+<section class="scene scene--escape-final" data-scene="17" id="scene-17">
+<div class="scene-inner scene-inner--center">
+<p class="eyebrow">SCENE 17</p>
+<h2>So Chaklii…</h2>
+<p class="big-question">Do you still want this annoying Popat?</p>
+<div class="choice-row final-escape-row" id="final-escape-row">
+<button class="gold-button gold-button--large" id="yes-final" type="button">YES <span>♥</span></button>
+<button class="ghost-button" id="no-final" type="button">NO 😤</button>
+</div>
+<p class="result-copy result-copy--large" id="final-escape-result"></p>
+</div>
+</section>
+<!-- 18 -->
+<section class="scene scene--surprise" data-scene="18" id="scene-18">
+<div class="scene-inner scene-inner--center">
+<p class="eyebrow">SCENE 18</p>
+<div class="surprise-blackout"></div>
+<p class="surprise-one">One last surprise…</p>
+<div aria-hidden="true" class="treasure-box" id="treasure-box"><div class="treasure-lid"></div><div class="treasure-body"></div><span>♥</span></div>
+<button class="gold-button gold-button--large" id="open-surprise" type="button">Open Surprise</button>
+<div class="surprise-result" hidden="" id="surprise-result">
+<h2>Congratulations ❤️</h2>
+<p>You unlocked:</p>
+<div class="unlock-grid">
+<div>Unlimited Popat teasing 😂</div>
+<div>Unlimited honest conversations ❤️</div>
+<div>Unlimited support on difficult days 🤍</div>
+<div>Lifetime membership: my favourite person</div>
+</div>
+
+</div>
+<div class="ending-love-letter-stage" hidden="" id="ending-love-letter-stage">
+<p class="ending-love-letter-kicker">Before the credits… the part I hope you remember after the screen goes dark.</p>
+<div class="official-letter" hidden="" id="ending-love-letter">
+<div class="official-letter__seal-row">
+<span class="official-letter__seal">♥</span>
+<span class="official-letter__tiny">PRIVATE • PERSONAL • ONLY FOR CHAKLII</span>
+</div>
+<div class="official-letter__header">
+<p class="official-letter__kicker">THE LETTER I WANTED TO SAY PROPERLY</p>
+<h3>For my Chaklii 🐦</h3>
+<p class="official-letter__date">SINCE 03 MAY 2024</p>
+</div>
+<div class="official-letter__rule"></div>
+<div class="official-letter__body"><p class="letter-signature">Dear Chaklii ❤️</p><p>There are things I can say easily when I am joking, and there are things I feel so deeply that I never seem to find the perfect words for them. I made this little movie because an ordinary message felt too small for everything I wanted you to know.</p><p>When I think about us, I do not only remember the big moments. I remember the small ones: a random message that changed my mood, a stupid joke that made us laugh, a conversation that went on longer than planned, and those ordinary minutes that somehow became the part of the day I looked forward to most.</p><p class="letter-highlight">You have become important to me in hundreds of quiet ways.</p><p>I notice your effort. I notice when you care even when you do not make a big show of it. I notice the little things you remember. I notice the times you try to understand me, even when I make that difficult.</p><p>And I know I have not always returned that care perfectly. Sometimes I tease when I should listen. Sometimes I defend myself when I should simply understand. Sometimes I realise too late that a small thing hurt you more than I thought it would.</p><p>For those moments, I do not want to give you a dramatic promise that I will suddenly become perfect. I would rather give you something more real: I will keep learning. I will keep listening. I will keep trying to become better at loving someone whose feelings genuinely matter to me.</p><p class="letter-pause">Because you genuinely matter to me.</p><p>Not only when we are laughing. Not only when everything is easy. You matter when we misunderstand each other, when one of us is stubborn, when the mood is bad, and when saying “I am sorry” takes more courage than it should.</p><p>I do not want us to be a perfect story. I want us to be an honest one—two people who can be silly, dramatic, annoying, caring, imperfect, and still choose to treat each other with more patience after every lesson.</p><p>Since 03 May 2024, time has been collecting tiny pieces of us. Some are funny. Some are messy. Some are soft. Some are probably too ridiculous to explain to anyone else. But they are ours, and I am grateful for them.</p><p class="letter-highlight">If you remember only one thing from this entire movie, remember this: your place in my life is not measured by one perfect day.</p><p>It is in the consistency of missing your messages when they are not there. It is in wanting to tell you something the moment it happens. It is in caring whether you are okay. It is in the fact that, after the jokes and arguments and normal everyday chaos, you are still one of the first people my mind looks for.</p><p>I hope I keep giving you reasons to feel valued, respected, heard, and safe being exactly who you are. I hope I never become too comfortable to keep making effort. I hope we keep finding our way back to laughter without ignoring the things we need to learn from.</p><p class="letter-final">You are one of the most meaningful parts of my ordinary days, Chaklii. And ordinary days are most of life. That is why this means so much to me. ❤️</p><p>Thank you for the care you give. Thank you for the memories we already have. Thank you for every silly conversation that somehow became important just because it was with you.</p><p>Whatever the next chapter looks like, I want to meet it with more patience, more honesty, more effort, and the same ridiculous Popat humour you already know too well. 😌</p><p class="letter-final letter-final--small">This whole movie was made for one reason: I wanted you to see, for a few minutes, how much space you quietly occupy in my heart and in my everyday life.</p><p class="letter-signature letter-signature--end">Yours,<br/>Popat 🦜❤️</p></div>
+<div class="official-letter__footer"><span>MADE WITH EFFORT</span><span>KEPT WITH CARE</span><span>FOR CHAKLII ONLY</span></div>
+</div>
+</div><button class="gold-button credits-after-letter" id="to-credits" type="button">Roll Credits</button>
+</div>
+</section>
+<!-- 19 -->
+<section class="scene scene--credits" data-scene="19" id="scene-19">
+<div class="credits-scroll">
+<p class="film-mark">A STORY BY</p>
+<h2>Popat <span>♥</span> Chaklii</h2>
+<p>Started: 03 May 2024</p>
+<div class="credit-block"><span>GENRE</span><strong>Comedy · Chaos · Care · Us</strong></div>
+<div class="credit-block"><span>MAIN CHARACTERS</span><strong>One impossible Popat<br/>One unforgettable Chaklii</strong></div>
+<div class="credit-block"><span>SPECIAL EFFECTS</span><strong>Arguments<br/>Laughs<br/>Learning<br/>A lot of care</strong></div>
+<p class="credits-end">THE END?</p>
+<p class="credits-final">OR…<br/>JUST ANOTHER CHAPTER ❤️</p>
+<button class="gold-button" id="replay-story" type="button">Replay Our Story</button>
+</div>
+</section>
+</main>
+<button aria-label="Next scene" class="next-scene" id="next-scene" type="button"><span>Continue</span><b>↓</b></button>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+
+
+
+</div>
+</body>
+</html>
