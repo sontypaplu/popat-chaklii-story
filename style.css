@@ -615,3 +615,20 @@ button:focus-visible { outline:2px solid rgba(247,223,137,.92); outline-offset:3
 @media (prefers-reduced-motion:reduce) {
   .scene.scene-entered .scene-inner { animation:none!important; }
 }
+
+@media (max-width:600px){
+
+.scene--intro {
+    width:100vw;
+    min-height:100svh;
+}
+
+.intro__inner {
+    width:95vw;
+}
+
+.hero-title {
+    font-size:clamp(3rem,14vw,5rem);
+}
+
+}
