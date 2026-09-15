@@ -7,7 +7,7 @@
 (() => {
   'use strict';
 
-  const START_DATE = new Date('2024-05-03T00:00:00');
+  const START_DATE = new Date('2024-05-04T00:00:00');
   const TOTAL_SCENES = 19;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -16,7 +16,7 @@
 
   // Replace the image paths below with your real memories. Keep image: "" to show a beautiful placeholder.
   const memories = [
-    { image: 'assets/images/memories/01.jpg', date: '03 MAY 2024', title: 'The Beginning', message: 'The date that quietly started everything.' },
+    { image: 'assets/images/memories/01.jpg', date: '04 MAY 2024', title: 'The Beginning', message: 'The date that quietly started everything.' },
     { image: 'assets/images/memories/02.jpg', date: 'OUR EARLY DAYS', title: 'That Silly Moment', message: 'The kind of memory that still makes an ordinary day better.' },
     { image: 'assets/images/memories/03.jpg', date: 'ONE OF THOSE DAYS', title: 'Professional Fighting', message: 'Proof that two stubborn people can still find their way back to a smile.' },
     { image: 'assets/images/memories/04.jpg', date: 'A FAVOURITE MEMORY', title: 'Just Us', message: 'The little moments somehow become the ones that stay.' },
